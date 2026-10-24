@@ -1,0 +1,25 @@
+text,category
+"Streetlight near the community park is not working",streetlight
+"The lamp post on our road has stopped working",streetlight
+"Several street lights are broken in the lane",streetlight
+"Streetlight flickers every night near the school",streetlight
+"Garbage has not been collected from our area for days",waste
+"Overflowing garbage bins smell bad near the market",waste
+"Municipal waste collection was missed this week",waste
+"Trash is piling up beside the apartment entrance",waste
+"There is no water supply in our building since morning",water
+"Water supply is intermittent in our neighborhood",water
+"A burst water pipeline is flooding the shared residential street",water
+"Dirty drinking water has made several residents sick",water
+"The road has large potholes and needs repair",roads
+"Potholes on the main road are damaging vehicles",roads
+"The road surface is broken near the bus stop",roads
+"A section of road has collapsed after heavy rain",roads
+"Power outage in multiple homes since last night",electricity
+"An exposed live wire injured a person near the gate",electricity
+"Electricity keeps cutting out in our building",electricity
+"The power connection is not working in my home",electricity
+"Drain is blocked and wastewater is overflowing",drainage
+"Rainwater drainage is blocked along the street",drainage
+"Open drain is overflowing near several houses",drainage
+"Blocked sewer is causing water to collect in the lane",drainage
