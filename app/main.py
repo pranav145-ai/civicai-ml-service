@@ -1,16 +1,18 @@
 from pathlib import Path
 from fastapi import FastAPI, HTTPException
+from fastapi.responses import FileResponse
 from pydantic import BaseModel, Field
 from app.services.model_service import CivicAIModelService
 
 ROOT = Path(__file__).resolve().parents[1]
 DEFAULT_DATASET = ROOT / "dataset" / "grievances.csv"
 ARTIFACT = ROOT / "artifacts" / "category_model.joblib"
+UI_FILE = ROOT / "app" / "templates" / "index.html"
 
 app = FastAPI(
     title="CivicAI ML Service",
     description="Grievance category classification and rule-based urgency assessment.",
-    version="1.0.0",
+    version="1.1.0",
 )
 service = CivicAIModelService(ARTIFACT)
 
@@ -35,6 +37,11 @@ class TrainRequest(BaseModel):
 @app.on_event("startup")
 def load_model():
     service.load()
+
+
+@app.get("/", include_in_schema=False)
+def home():
+    return FileResponse(UI_FILE)
 
 
 @app.get("/health")
